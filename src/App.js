@@ -45,8 +45,8 @@ const doc = `
 `;
 
 function App() {
-  const [showMain, setShowMain] = useState(true);
-  const [showFirst, setShowFirst] = useState(false);
+  const [showMain, setShowMain] = useState(false);
+  const [showFirst, setShowFirst] = useState(true);
   const [showEnding, setShowEnding] = useState(false);
   const onTypingComplete = () => {
     setShowMain(true);
