@@ -3,6 +3,8 @@ import Main from './components/Main';
 import Typewriter from './components/TypeWriter';
 import React, { useState } from 'react';
 
+const userAgent = navigator.userAgent;
+
 const text = `
   枢脳機関へようこそ
 
@@ -11,6 +13,8 @@ const text = `
   
   網膜認証中.......................OK
   指紋認証中.......................OK
+  端末情報を取得......................
+  ${userAgent}
   
   ゲスト様 ようこそ
   
@@ -21,6 +25,8 @@ const text = `
 `;
 
 const doc = `
+  テキストアシスタントのコマンドの入力に成功しました。
+
   おかえりなさいませ。博士。
   新たなコマンドをお待ちいたしております。
 
@@ -59,13 +65,13 @@ function App() {
   return (
     <div className="App">
       {showFirst && (
-        <Typewriter text={text} speed={100} onTypingComplete={onTypingComplete} />
+        <Typewriter text={text} speed={50} onTypingComplete={onTypingComplete} />
       )}
       {showMain && (
         <Main setShowMain={setShowMain} setShowEnding={setShowEnding} />
       )}
       {showEnding && (
-        <Typewriter text={doc} speed={100} onTypingComplete={onEnding} />
+        <Typewriter text={doc} speed={50} onTypingComplete={onEnding} />
       )}
     </div>
   );
