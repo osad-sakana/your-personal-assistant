@@ -61,13 +61,13 @@ const responseList = [
   {
     id: 9,
     option: "私のIDを教えてください。",
-    response: "あなたのIDは0024です。",
+    response: "あなたの現在のアクセスIDは0024です。",
     nextIds: [10],
   },
   {
     id: 10,
     option: "私の名前を教えてください。",
-    response: "個人情報を開示することは許可されていません。",
+    response: "データベースの個人情報を開示することは許可されていません。",
     nextIds: [],
   }
 ]
